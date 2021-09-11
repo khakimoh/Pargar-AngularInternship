@@ -1,10 +1,9 @@
-
 <div *ngIf="currentStep == 0">
     Welcome dear user!
 </div>
 <div *ngIf="currentStep == 1">
 
-    <form [formGroup]="stepForm1" (ngSubmit)="getVerificationCode()" >
+    <form [formGroup]="stepForm1" (ngSubmit)="verifyCode()" >
         <input type="tel" formControlName="mobile" placeholder="Phone number"/>
         <button type="submit" [disabled]="stepForm1.invalid">Submit</button>
     </form>
@@ -12,6 +11,7 @@
 <div *ngIf="currentStep == 2">
     <form [formGroup]="stepForm2" (ngSubmit)="getToken()">
         <input type="number" formControlName="verification_code" placeholder="Verification code"/>
+        <input type="string" formControlName="nickname" placeholder="nickname show"/>
         <button type="submit" [disabled]="stepForm2.invalid">Submit</button>
     </form>
 </div>

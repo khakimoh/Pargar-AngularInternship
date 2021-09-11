@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { Page404Component } from './extra/components/error/page404/page404.component';
 import { HeaderComponent } from './extra/components/template/header/header.component';
 import { FooterComponent } from './extra/components/template/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpInterceptorService } from './server/http-interceptor.service';
 import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -22,6 +22,7 @@ import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [

@@ -9,10 +9,9 @@ import { LocalStorageService } from 'src/app/server/storage/local-storage.servic
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  tokenAuth: string | undefined;
+  currentStep: number = 1;
   stepForm1: FormGroup = new FormGroup({});
   stepForm2: FormGroup = new FormGroup({});
-  currentStep: number = 1;
 
   constructor(
     private apiService: ApiService,
@@ -25,34 +24,35 @@ export class HeaderComponent implements OnInit {
 
   initForms(): void {
     this.stepForm1 = new FormGroup({
-      mobile: new FormControl('09357779303', [
+      mobile: new FormControl('', [
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(13),
       ]),
       device_id: new FormControl('Desktop', [Validators.required]),
       device_model: new FormControl('browser', [Validators.required]),
-      device_os: new FormControl('angularJS', [Validators.required]),
+      device_os: new FormControl('angularJS'),
     });
+
     this.stepForm2 = new FormGroup({
-      mobile: new FormControl('09357779303', [
+      mobile: new FormControl('', [
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(13),
       ]),
       device_id: new FormControl('Desktop', [Validators.required]),
       verification_code: new FormControl('', [Validators.required]),
-      nickname: new FormControl('', [Validators.required]),
+      nickname: new FormControl('نام مستعار', [Validators.required]),
     });
   }
 
-  getVerificationCode() {
+  verifyCode() {
     this.apiService.getVerificationCode(this.stepForm1.value).subscribe(
       () => {
         this.currentStep = 2;
         this.stepForm2
           .get('mobile')
-          ?.patchValue(this.stepForm1.value('mobile'));
+          ?.patchValue(this.stepForm1.value.mobile);
       },
       (error) => {
         this.currentStep = 1;
@@ -63,32 +63,16 @@ export class HeaderComponent implements OnInit {
   getToken() {
     this.apiService.getTokenWithCode(this.stepForm2.value).subscribe(
       (data) => {
-        this.currentStep = -1;
+        this.currentStep = 0;
         this.localStorageService.token = data.token;
-      },
-      (error) => {}
+      }
     );
   }
 
-  getProfileInfo() {
+  profileInfo() {
     this.apiService.getUserProfile().subscribe((data) => {
       console.log(data);
     });
   }
 
-  // filter = {
-  //   "mobile":"09357779303",
-  //   "device_os":"angularJS",
-  //   "device_id":"Desktop",
-  //   "device_model":"browser"
-  // }
-  // login():void {
-  //   console.log("i am click");
-  //   this.apiService.getTokenAuth(this.filter).subscribe(
-  //     response =>{
-  //       console.log(response)
-  //     }
-  //   )
-
-  // }
 }

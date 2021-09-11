@@ -13,14 +13,17 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   getVerificationCode(data: any): Observable<any>{
-    return this.httpClient.get<any>(`${baseUrl}/mobile_login_step1/${storeId}` , data);
+    return this.httpClient.post<any>(`${baseUrl}/mobile_login_step1/${storeId}` , data);
   }
   getTokenWithCode(data: any): Observable<any>{
-    return this.httpClient.get<any>(`${baseUrl}/mobile_login_step2/${storeId}` , data);
+    return this.httpClient.post<any>(`${baseUrl}/mobile_login_step2/${storeId}` , data);
   }
   getUserProfile(): Observable<any>{
     return this.httpClient.get<any>(`${baseUrl}/profile`);
   }
+}
+
+
   // getTokenAuth(filters: any): Observable<any>{
   //   const queryItem = '/mobile_login_step1/7';
   //   let params = new HttpParams();
@@ -31,5 +34,3 @@ export class ApiService {
   //   }
   //   return this.httpClient.get<any>(`${baseUrl}${queryItem}` , {params});
   // }
-
-}
