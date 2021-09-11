@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://pargar.ir'
+  baseUrl: 'https://api.vasapi.click',
+  storeId:7
 };
 
 /*
