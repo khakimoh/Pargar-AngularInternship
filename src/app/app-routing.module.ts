@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Page404Component } from './extra/components/error/page404/page404.component';
 
 const routes: Routes = [
   {
@@ -12,8 +11,12 @@ const routes: Routes = [
     loadChildren: ()=> import('./modules/profile/profile.module').then(mod => mod.ProfileModule)
   },
   {
+    path: 'catagory',
+    loadChildren: ()=> import('./modules/catagory/catagory.module').then(mod => mod.CatagoryModule)
+  },
+  {
     path: '**',
-    component: Page404Component
+    loadChildren: ()=> import('./modules/template/template.module').then(mod => mod.TemplateModule)
   },
 
 ];

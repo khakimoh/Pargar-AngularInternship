@@ -6,9 +6,10 @@ import { LocalStorageService } from 'src/app/server/storage/local-storage.servic
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
   currentStep: number = 1;
   stepForm1: FormGroup = new FormGroup({});
   stepForm2: FormGroup = new FormGroup({});
