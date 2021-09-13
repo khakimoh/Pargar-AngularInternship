@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from 'src/app/server/api/api.service';
-import { LocalStorageService } from 'src/app/server/storage/local-storage.service';
+import { ApiService } from 'src/app/services/server/api/api.service';
+import { LocalStorageService } from 'src/app/services/storage/local-storage.service';
 
 @Component({
   selector: 'app-header',
