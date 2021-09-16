@@ -1,0 +1,33 @@
+.form-inline{
+  display: inline-flex;
+}
+.navbar-nav{
+  align-items: center;
+}
+ul.navbar-nav li{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.nav-justify{
+  justify-content: space-between;
+}
+.nav-item-size{
+  padding-left: 20px;
+}
+.nav-icon{
+  border-left: thin solid gray;
+  padding-left: 5px;
+}
+.full-width{
+  width: 100%;
+}
+.p-relative{
+  position: relative;
+}
+.search-in-input{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(10px,-50%);
+  opacity: 0.5;
+}

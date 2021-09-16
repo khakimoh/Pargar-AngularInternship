@@ -1,17 +1,50 @@
-<div *ngIf="currentStep == 0">
-    Welcome dear user!
-</div>
-<div *ngIf="currentStep == 1">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand nav-icon" href="#">پرگار</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-justify" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 full-width">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li>
+          <form class="d-flex p-relative">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <i class="fas fa-search search-in-input"></i>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="btn" aria-current="page" href="#">Home</button>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
 
-    <form [formGroup]="stepForm1" (ngSubmit)="verifyCode()" >
-        <input type="tel" formControlName="mobile" placeholder="Phone number"/>
-        <button type="submit" [disabled]="stepForm1.invalid">Submit</button>
-    </form>
-</div>
-<div *ngIf="currentStep == 2">
-    <form [formGroup]="stepForm2" (ngSubmit)="getToken()">
-        <input type="number" formControlName="verification_code" placeholder="Verification code"/>
-        <input type="string" formControlName="nickname" placeholder="nickname show"/>
-        <button type="submit" [disabled]="stepForm2.invalid">Submit</button>
-    </form>
-</div>
+    </div>
+  </div>
+</nav>
+

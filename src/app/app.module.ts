@@ -8,20 +8,27 @@ import { HttpClientModule , HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './services/server/http-interceptor.service';
 import { HeaderComponent } from './componentsLayout/header/header.component';
 import { FooterComponent } from './componentsLayout/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslatePipe } from './translate.pipe';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
   ],
   providers: [
     {

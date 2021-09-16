@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/server/api/api.service';
 import { LocalStorageService } from 'src/app/services/storage/local-storage.service';
-
+interface Food {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,7 +16,11 @@ export class HeaderComponent implements OnInit {
   currentStep: number = 1;
   stepForm1: FormGroup = new FormGroup({});
   stepForm2: FormGroup = new FormGroup({});
-
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
   constructor(
     private apiService: ApiService,
     private localStorageService: LocalStorageService
