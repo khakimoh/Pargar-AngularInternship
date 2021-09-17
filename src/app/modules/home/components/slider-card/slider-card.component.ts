@@ -12,4 +12,6 @@ export class SliderCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }

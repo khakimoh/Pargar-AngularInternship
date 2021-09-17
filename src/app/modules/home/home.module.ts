@@ -12,10 +12,6 @@ import { PosterProductComponent } from './components/poster-product/poster-produ
 
 
 
-
-
-
-
 @NgModule({
   declarations: [
     BannerComponent,

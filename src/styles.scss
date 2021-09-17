@@ -1,9 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "iransans";
+  src: url("./assets/fonts/iransans.eot");
+  src: url("./assets/fonts/iransans.woff") format("woff"),
+    url("./assets/fonts/irsans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Shabnam-FD";
+  src: url("./assets/fonts/Shabnam-FD.eot");
+  src: url("./assets/fonts/Shabnam-FD.woff") format("woff"),
+    url("./assets/fonts/Shabnam-FD.ttf") format("truetype");
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
-direction: rtl;
-background-color: whitesmoke;
+body { margin: 0;
+       font-family: "iransans",Roboto, "Helvetica Neue", sans-serif!important; 
+      direction: rtl;
+      background-color: whitesmoke;
 }
 
 .p-relative{
@@ -13,7 +28,12 @@ background-color: whitesmoke;
 .box-level {
     align-content: baseline;
   }
-
-  .full-width{
-      width: 100%;
-  }
+.full-width{
+     width: 100%;
+}
+.gray-low-color{
+  color: hsla(0, 0%, 50%,0.8)
+}
+.bold{
+  font-weight: bold;
+}

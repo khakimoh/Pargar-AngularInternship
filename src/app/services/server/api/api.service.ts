@@ -21,6 +21,9 @@ export class ApiService {
   getUserProfile(): Observable<any>{
     return this.httpClient.get<any>(`${baseUrl}/profile`);
   }
+  getHomeData(): Observable<any>{
+    return this.httpClient.get<any>(`${baseUrl}/store/${storeId}`);
+  }
 }
 
 
