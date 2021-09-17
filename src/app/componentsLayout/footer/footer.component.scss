@@ -1,0 +1,37 @@
+.grid{
+    display: grid;
+}
+.g-col-1-1-1{
+    grid-template-columns: 4fr 4fr 4fr;
+    gap: 5px;
+    align-content: baseline;
+}
+.g-col-1-1{
+    grid-template-columns: 6fr 6fr;
+}
+div.footer{
+    border-top: thin solid gray;
+}
+ul.footer-link{
+    li{
+        list-style-type: none;
+        a:hover{
+            cursor: pointer;
+        }
+    }
+}
+.social-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 2px;
+}
+.app-download-icon{
+    max-height: 40px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.center-item *{
+    text-align: center;
+}

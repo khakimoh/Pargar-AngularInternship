@@ -6,7 +6,9 @@ import { BannerComponent } from './components/banner/banner.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
+import { SliderCardComponent } from './components/slider-card/slider-card.component';
+import { DescriptionProductComponent } from './components/description-product/description-product.component';
+import { PosterProductComponent } from './components/poster-product/poster-product.component';
 
 
 
@@ -17,13 +19,15 @@ import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     BannerComponent,
-    LayoutComponent
+    LayoutComponent,
+    SliderCardComponent,
+    DescriptionProductComponent,
+    PosterProductComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     CarouselModule ,
-    BrowserModule,
   ]
 })
 export class HomeModule { }

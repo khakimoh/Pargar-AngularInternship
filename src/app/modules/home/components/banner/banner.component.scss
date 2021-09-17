@@ -1,4 +1,18 @@
-::ng-deep{
-    @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-    @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+.banner-image {
+  border-radius: 10px;
+}
+
+.banner-title {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+}
+
+::ng-deep {
+  @import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+  @import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 }

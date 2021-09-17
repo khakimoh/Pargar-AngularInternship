@@ -3,4 +3,17 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 direction: rtl;
+background-color: whitesmoke;
 }
+
+.p-relative{
+    position: relative;
+}
+
+.box-level {
+    align-content: baseline;
+  }
+
+  .full-width{
+      width: 100%;
+  }
