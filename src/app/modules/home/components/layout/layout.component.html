@@ -1,5 +1,18 @@
-<app-banner></app-banner>
-<app-slider-card></app-slider-card>
+<div class="container-fluid py-4 mt-5">
+  <div class="row">
+    <app-banner *ngFor="let banner of headerData" [banner]="banner" class="col-3"></app-banner>
+  </div>
+</div>
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData0?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData0?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
 <app-description-product></app-description-product>
 <app-slider-card></app-slider-card>
 <app-poster-product></app-poster-product>

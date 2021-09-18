@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Feature_avatar, Headeritem } from 'src/app/model/home.model';
 
 @Component({
   selector: 'app-banner',
@@ -7,6 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
+  @Input('banner') bannerData: Headeritem | undefined;
+  featureAvatar:Feature_avatar[] | any;
   dynamicSlides = [
     {
       id: '1',
@@ -42,8 +45,10 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.featureAvatar=this.bannerData?.feature_avatar;
+    this.featureAvatar=this.featureAvatar.xhdpi;
   }
-
+  
  customOptions: OwlOptions = {
    loop: true,
    mouseDrag: true,

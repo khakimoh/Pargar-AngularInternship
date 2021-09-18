@@ -6,18 +6,6 @@
   width: 100%;
 }
 
-.view-all {
-  color: $base-color;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.title-create{
-  font-weight: bold;
-}
-
 .card-radius {
   border-radius: 10px;
   img {
@@ -25,3 +13,14 @@
   }
 }
 
+.title-create {
+  font-weight: bold;
+}
+
+.view-all {
+  color: $base-color;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
