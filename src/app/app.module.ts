@@ -11,6 +11,9 @@ import { FooterComponent } from './componentsLayout/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslatePipe } from './translate.pipe';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoaderSpinnerComponent } from './componentsLayout/loader-spinner/loader-spinner.component';
 
 
 
@@ -20,7 +23,8 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TranslatePipe
+    TranslatePipe,
+    LoaderSpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,8 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     HttpClientModule,
     MatSelectModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     {

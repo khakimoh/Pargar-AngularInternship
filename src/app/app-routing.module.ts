@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoaderSpinnerComponent } from './componentsLayout/loader-spinner/loader-spinner.component';
 
 const routes: Routes = [
   {
