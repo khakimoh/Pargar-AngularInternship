@@ -46,6 +46,9 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.featureAvatar=this.bannerData?.feature_avatar;
+    this.assignProduct();
+  }
+  assignProduct(){
     this.featureAvatar=this.featureAvatar.xhdpi;
   }
   

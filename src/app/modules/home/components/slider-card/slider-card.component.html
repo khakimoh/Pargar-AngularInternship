@@ -1,12 +1,12 @@
 <div class="card card-radius">
-  <img src="../../../../../assets/images/home/banner.jpg" class="card-img-top img-fluid" alt="..." />
+  <img [src]="featureAvatar" class="card-img-top img-fluid" alt="..." />
   <div class="card-body">
-    <h3 class="card-title bold">{{ productName }}</h3>
-    <p class="card-text gray-low-color">پرگار</p>
+    <h3 class="card-title bold">{{ name }}</h3>
+    <p class="card-text gray-low-color">{{ producerName }}</p>
     <div class="detail">
       <div>
         <i class="far fa-eye gray-low-color"></i>
-        <span class="px-1 gray-low-color">333</span>
+        <span class="px-1 gray-low-color">{{ totalView }}</span>
       </div>
       <div>
         <i class="fa fa-star fa-star-color"></i>

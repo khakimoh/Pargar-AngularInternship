@@ -29,7 +29,13 @@ export interface Headeritem {
     total_view:number,
     date_added:Date,
     invest_goal:any,
-    product_staff:[]
+    product_staff:[],
+    support:support[],
+    is_special:boolean,
+    additional_attributes:[],
+    date_published:Date,
+    customjson:any,
+    approved_age:any
 }
 export interface Homeitem {
     id:number,
@@ -50,8 +56,29 @@ export interface Products {
     producer_name:string,
     payment_type:[],
     price:number,
-    price_show:any
+    price_show:any,
+    avatar:Avatar[],
+    feature_avatar:Feature_avatar[],
+    rank:number,
+    short_description:string,
+    is_purchased:boolean,
+    comments:number,
+    is_bookmarked:boolean,
+    sku:string,
+    price_unit:string,
+    total_view:number,
+    date_added:Date,
+    invest_goal:any,
+    product_staff:[],
+    support:support[],
+    is_special:boolean,
+    additional_attributes:[],
+    date_published:Date,
+    customjson:any,
+    approved_age:any
+    description:string
 }
+
 export interface Avatar {
     xxxdpi:string,
     xxhdpi:string,
@@ -65,6 +92,17 @@ export interface Feature_avatar {
     xhdpi:string,
     hdpi:string,
     mdpi:string
+}
+
+export interface support {
+    name:string,
+    tel:string,
+    email:string,
+    website:string,
+    linkedin:string,
+    google_plus:string,
+    instagram:string,
+    telegram:string
 }
 
 export interface home {

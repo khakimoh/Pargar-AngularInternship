@@ -1,8 +1,10 @@
+<div *ngIf="visiableComponent">
 <div class="container-fluid py-4 mt-5">
   <div class="row">
     <app-banner *ngFor="let banner of headerData" [banner]="banner" class="col-3"></app-banner>
   </div>
 </div>
+
 <div class="container py-3">
   <div class="detail">
     <h2 class="title-create bold">{{ homeData0?.title }}</h2>
@@ -13,18 +15,121 @@
     </app-slider-card>
   </div>
 </div>
-<app-description-product></app-description-product>
-<app-slider-card></app-slider-card>
-<app-poster-product></app-poster-product>
-<app-slider-card></app-slider-card>
-<app-description-product></app-description-product>
-<app-slider-card></app-slider-card>
-<app-poster-product></app-poster-product>
-<app-slider-card></app-slider-card>
-<app-description-product></app-description-product>
-<app-slider-card></app-slider-card>
-<app-poster-product></app-poster-product>
-<app-slider-card></app-slider-card>
-<app-poster-product></app-poster-product>
-<app-slider-card></app-slider-card>
-<app-poster-product></app-poster-product>
+
+<app-description-product *ngFor="let mainProduct of homeData1?.products" [mainProduct]="mainProduct">
+</app-description-product>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData2?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData2?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="row">
+    <app-poster-product *ngFor="let poster of homeData4?.products" [poster]="poster" class="col-4"></app-poster-product>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData5?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData5?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<app-description-product *ngFor="let mainProduct of homeData6?.products" [mainProduct]="mainProduct">
+</app-description-product>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData7?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData7?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="row">
+    <app-poster-product *ngFor="let poster of homeData8?.products" [poster]="poster" class="col-4"></app-poster-product>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData10?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData10?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<app-description-product *ngFor="let mainProduct of homeData11?.products" [mainProduct]="mainProduct">
+</app-description-product>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData13?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData13?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="row">
+    <app-poster-product *ngFor="let poster of homeData14?.products" [poster]="poster" class="col-4"></app-poster-product>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData15?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData15?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="row">
+    <app-poster-product *ngFor="let poster of homeData16?.products" [poster]="poster" class="col-4"></app-poster-product>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="detail">
+    <h2 class="title-create bold">{{ homeData17?.title }}</h2>
+    <a class="view-all bold">مشاهده همه</a>
+  </div>
+  <div class="row">
+    <app-slider-card *ngFor="let slider of homeData17?.products" [slider]="slider" class="col-3">
+    </app-slider-card>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="row">
+    <app-poster-product *ngFor="let poster of homeData18?.products" [poster]="poster" class="col-4"></app-poster-product>
+  </div>
+</div>
+
+</div>

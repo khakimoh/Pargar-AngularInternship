@@ -12,7 +12,8 @@ interface Food {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  accountDrop1:string="ورود / ثبت نام";
+  accountDrop2:string="کد هدیه";
   currentStep: number = 1;
   stepForm1: FormGroup = new FormGroup({});
   stepForm2: FormGroup = new FormGroup({});

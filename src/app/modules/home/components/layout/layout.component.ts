@@ -8,7 +8,9 @@ import { ApiService } from 'src/app/services/server/api/api.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
+  visiableComponent:boolean=true;
   homeData: Homeitem[] = [];
+  headerData: Headeritem[] = [];
   homeData0:any;
   homeData1:any;
   homeData2:any;
@@ -18,13 +20,25 @@ export class LayoutComponent implements OnInit {
   homeData6:any;
   homeData7:any;
   homeData8:any;
-  headerData: Headeritem[] = [];
+  homeData9:any;
+  homeData10:any;
+  homeData11:any;
+  homeData12:any;
+  homeData13:any;
+  homeData14:any;
+  homeData15:any;
+  homeData16:any;
+  homeData17:any;
+  homeData18:any;
   constructor(
     private apiService: ApiService,
   ) { }
 
   ngOnInit(): void {
     this.home();
+    if(this.homeData){
+      this.visiableComponent=true;
+    }
   }
 
   home() {
@@ -41,7 +55,17 @@ export class LayoutComponent implements OnInit {
         this.homeData6=this.homeData[6];
         this.homeData7=this.homeData[7];
         this.homeData8=this.homeData[8];
-        console.log(this.homeData0);
+        this.homeData9=this.homeData[9];
+        this.homeData10=this.homeData[10];
+        this.homeData11=this.homeData[11];
+        this.homeData12=this.homeData[12];
+        this.homeData13=this.homeData[13];
+        this.homeData14=this.homeData[14];
+        this.homeData15=this.homeData[15];
+        this.homeData16=this.homeData[16];
+        this.homeData17=this.homeData[17];
+        this.homeData18=this.homeData[18];
+        //console.log(respose);
       }
     );
   }
