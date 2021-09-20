@@ -113,4 +113,5 @@ export interface home {
     tabStrip:[],
     headeritem:Headeritem[],
     homeitem:Homeitem[]
+    
 }

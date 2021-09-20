@@ -1,15 +1,15 @@
 @import "/src/assets/style/style-shared.scss";
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 ::ng-deep{
     .mat-progress-spinner circle, .mat-spinner circle{
         color: $base-color!important;
     }
     .mat-progress-spinner circle, .mat-spinner circle{
-        stroke: $base-color!important;
+        stroke: $base-color;
     }
-}
-.spinner{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

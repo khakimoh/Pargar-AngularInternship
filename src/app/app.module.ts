@@ -13,8 +13,7 @@ import { TranslatePipe } from './translate.pipe';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { LoaderSpinnerComponent } from './componentsLayout/loader-spinner/loader-spinner.component';
-
+import { LoadingComponent } from './componentsLayout/loader-spinner/loading/loading.component';
 
 
 
@@ -24,7 +23,8 @@ import { LoaderSpinnerComponent } from './componentsLayout/loader-spinner/loader
     HeaderComponent,
     FooterComponent,
     TranslatePipe,
-    LoaderSpinnerComponent,
+    LoadingComponent,
+   
   ],
   imports: [
     BrowserModule,
